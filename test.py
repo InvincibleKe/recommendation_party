@@ -100,7 +100,6 @@ if __name__=='__main__':
     # user_inputs, movie_inputs = simulatorData()
     # model(user_inputs, movie_inputs)
     # tensorboardTest()
-
     #a = np.zeros((10000,200))
     #pkl.dump(a, open('test.p','wb'))
     text = '爱晶可真贤惠。'
