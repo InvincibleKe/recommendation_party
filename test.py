@@ -21,7 +21,6 @@ user_max_dict={
     'age':10,
     'job':10
 }
-
 movie_max_dict={
     'mid':10,
     'mtype':20,
