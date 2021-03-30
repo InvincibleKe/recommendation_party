@@ -1,4 +1,3 @@
-tqdm==4.38.1
 traitlets==4.3.3
 typing==3.6.2
 typing-extensions==3.7.4.3
