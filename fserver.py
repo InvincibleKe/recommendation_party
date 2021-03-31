@@ -5,7 +5,7 @@
 语音识别API的HTTP服务器程序
 """
 import http.server
-
+'''
 from SpeechModel251 import ModelSpeech
 from LanguageModel import ModelLanguage
 
@@ -16,7 +16,7 @@ ms.LoadModel(modelpath + 'm251/speech_model251_e_0_step_12000.model')
 
 ml = ModelLanguage('model_language')
 ml.LoadModel()
-
+'''
 class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
     def setup(self):
         self.request.settimeout(10)
