@@ -100,10 +100,10 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
     def recognize(self, wavs, fs):
         r = ''
         try:
-            r_speech = ms.RecognizeSpeech(wavs, fs)
+            r_speech = 1
             print(r_speech)
             str_pinyin = r_speech
-            r = ml.SpeechToText(str_pinyin)
+            r = 2
         except:
             r = ''
             print('[*Message] Server raise a bug. ')
