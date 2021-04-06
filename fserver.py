@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: nl8590687
-语音识别API的HTTP服务器程序
+@author: Jianrong Ke
+HTTP server of recommendation API
 """
 import http.server
 '''
@@ -28,23 +28,18 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-
         buf = 'ASRT_SpeechRecognition API'
         self.protocal_version = 'HTTP/1.1'
-
         self._set_response()
 
         buf = bytes(buf, encoding="utf-8")
         self.wfile.write(buf)
 
     def do_POST(self):
-        '''
-        处理通过POST方式传递过来并接收的语音数据
-        通过语音模型和语言模型计算得到语音识别结果并返回
-        '''
         path = self.path
         print(path)
         # 获取post提交的数据
+        # acquire data submitted by POST
         datas = self.rfile.read(int(self.headers['content-length']))
         # datas = urllib.unquote(datas).decode("utf-8", 'ignore')
         datas = datas.decode('utf-8')
@@ -87,9 +82,7 @@ class TestHTTPHandle(http.server.BaseHTTPRequestHandler):
             buf = r
         else:
             buf = '403'
-
         # print(datas)
-
         self._set_response()
 
         # buf = '<!DOCTYPE HTML> \n<html> \n<head>\n<title>Post page</title>\n</head> \n<body>Post Data:%s  <br />Path:%s\n</body>  \n</html>'%(datas,self.path)
