@@ -27,7 +27,7 @@ user_max_dict={
     'store': 1000  # each user can collect max 5 stores
 }
 
-party_max_dict={
+movie_max_dict={
     'pid':1000,  # 1000 parties
     'title':50,  # 50 words
     'owner':1000,  # each party can only have 1 owner
