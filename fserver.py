@@ -128,5 +128,5 @@ def start_server(ip, port):
     print('HTTP server closed')
 
 if __name__ == '__main__':
-    # start_server('', 20000)  # For IPv4 Network Only
-    start_server('::', 20000) # For IPv6 Network
+    start_server('', 20000)  # For IPv4 Network Only
+    #start_server('::', 20000) # For IPv6 Network

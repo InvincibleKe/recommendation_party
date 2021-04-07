@@ -94,20 +94,10 @@ def text2vec(text,model):
         except:
             pass
     return vector
+import requests, json
+
 if __name__=='__main__':
-    # model = rec_model(user_max_dict=user_max_dict, movie_max_dict=movie_max_dict, convParams=convParams)
-    # user_inputs, movie_inputs = simulatorData()
-    # model(user_inputs, movie_inputs)
-    # tensorboardTest()
-    #a = np.zeros((10000,200))
-    #pkl.dump(a, open('test.p','wb'))
-    text = '爱晶可真贤惠。'
-    MODEL_PATH = 'Params/word2vec/word2vec_from_weixin/word2vec/word2vec_wx'
-    model = gensim.models.Word2Vec.load(MODEL_PATH)
-    words_vec = np.array(text2vec(text,model))
-    print(words_vec.shape)
-    # word_vectors = api.load(MODEL_PATH)
-    # model = gensim.models.Word2Vec.load(MODEL_PATH)
-    #text_model = word2vec.KeyedVectors.load_word2vec_format(MODEL_PATH)
-    #text_model = Word2Vec.load(MODEL_PATH)
-    #print(text_model['非常']
+    github_url = 'https://192.168.10.41:5000/'
+    data = json.dumps({'name': 'test', 'description': 'some test repo'})
+    r = requests.post(github_url, data)
+    print(r.json)
