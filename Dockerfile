@@ -3,5 +3,5 @@ ADD requirements.txt /
 RUN pip install -r requirements.txt
 ADD . /app
 WORKDIR /app
-EXPOSE 5000
+EXPOSE 8000
 CMD ["python", "fserver.py"]
