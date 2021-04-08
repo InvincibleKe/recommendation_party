@@ -7,8 +7,6 @@
 #CMD ["python", "fserver.py"]
 # 指定基础镜像
 FROM python:3.7
-# 设置工作目录
-WORKDIR /root/recommendation_party
 ADD requirements.txt /
 # 安装项目依赖项
 RUN pip install -r requirements.txt
