@@ -9,6 +9,7 @@
 FROM python:3.7
 # 设置工作目录
 WORKDIR /root/recommendation_party
+ADD requirements.txt /
 # 安装项目依赖项
 RUN pip install -r requirements.txt
 # 为启动脚本添加执行权限
