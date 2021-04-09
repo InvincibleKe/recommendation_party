@@ -62,7 +62,6 @@ def simulatorData():
     return (user_inputs, movie_inputs)
 def tensorboardTest():
     from tensorboardX import SummaryWriter
-
     writer = SummaryWriter()
     x = torch.FloatTensor([100])
     y = torch.FloatTensor([500])
@@ -78,8 +77,7 @@ def tensorboardTest():
         writer.add_scalar('data/y', y, epoch)
         writer.add_scalar('data/loss', loss, epoch)
         writer.add_scalars('data/scalar_group', {'x':x, 'y':y,'loss':loss},epoch)
-        writer.add_text('zz/text', 'zz:this is epoch '+ str(epoch), epoch)
-
+        writer.add_text('zz/text', 'zz:this is epoch ' + str(epoch), epoch)
     writer.export_scalars_to_json("./test.json")
     writer.close()
 def text2vec(text,model):
@@ -97,7 +95,7 @@ def text2vec(text,model):
 import requests, json
 
 if __name__=='__main__':
-    github_url = 'https://192.168.10.41:5000/'
+    github_url = 'https://192.168.10.41:8000/'
     data = json.dumps({'name': 'test', 'description': 'some test repo'})
     r = requests.post(github_url, data)
     print(r.json)

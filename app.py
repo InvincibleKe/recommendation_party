@@ -7,8 +7,7 @@ CORS(app, resources={r'/api/*': {'origins': '*'}})
 api = Api(app)
 
 class Product(Resource):
-
     def get(self):
         products = ['Ice Cream', 'Chocolate', 'Coca Cola', 'Hamburger']
         return {'products': products}
-api.add_resource(Product, '/api/products')
+api.add_resource(Product, '/api/v1/recommendation/party_recommendation')
