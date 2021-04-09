@@ -11,7 +11,7 @@ ADD requirements.txt /
 # 安装项目依赖项
 RUN pip install -r requirements.txt
 # 为启动脚本添加执行权限
-WORKDIR /root/recommendation_party
+ADD start.sh /
 RUN chmod 755 start.sh
 # 容器启动时要执行的命令
 ENTRYPOINT ["./start.sh"]
