@@ -10,6 +10,8 @@ FROM python:3.6
 ADD requirements.txt /
 # 安装项目依赖项
 RUN pip install -r requirements.txt
+ADD . /app
+WORKDIR /app
 # 为启动脚本添加执行权限
 ADD start.sh /
 RUN chmod 755 start.sh
